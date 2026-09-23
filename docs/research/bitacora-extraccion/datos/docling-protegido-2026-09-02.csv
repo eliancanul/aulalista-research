@@ -1,0 +1,5 @@
+documento,paginas,split,adapter,receipt_status,elapsed_seconds,timeout_seconds,partial_output_available,resumable,quality_status,source_kind
+C01,5,calibration,docling,complete,18.502057,120,false,true,not_evaluable,protected_receipt
+C02,44,calibration,docling,censored_timeout,120.354409,120,false,true,not_evaluable,protected_receipt
+C03,15,test,docling,complete,55.740433,120,false,true,not_evaluable,protected_receipt
+C04,11,test,docling,complete,40.600276,120,false,true,not_evaluable,protected_receipt

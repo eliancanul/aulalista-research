@@ -1,0 +1,38 @@
+{
+  "provenance": "Transcripción de tablas 6.1 y 6.4 del manuscrito original, contrastada con reportes de campaña; no nueva adjudicación.",
+  "direct_matches": 13,
+  "derived_matches": 15,
+  "comparable_pairs": 22,
+  "by_document": [
+    {
+      "document": "D01",
+      "matches": 2,
+      "pairs": 5
+    },
+    {
+      "document": "D02",
+      "matches": 4,
+      "pairs": 6
+    },
+    {
+      "document": "D03",
+      "matches": 4,
+      "pairs": 5
+    },
+    {
+      "document": "D04",
+      "matches": 5,
+      "pairs": 6
+    }
+  ],
+  "discrepancy_hypotheses": {
+    "materia_campo": 3,
+    "grupo": 3,
+    "granularidad_temporal": 1
+  },
+  "abstention_types": {
+    "field_not_observed": 9,
+    "relational_disagreement": 3,
+    "incomplete_capture": 1
+  }
+}

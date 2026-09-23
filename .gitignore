@@ -1,0 +1,11 @@
+.DS_Store
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.py[cod]
+*.log
+*.pdf
+raw/
+outputs/
+tmp/
