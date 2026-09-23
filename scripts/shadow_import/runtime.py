@@ -268,7 +268,12 @@ def run_one(
     ]
     if resume:
         worker_command.append("--resume")
-    timed_command = ["/usr/bin/time", "-l", *worker_command] if Path("/usr/bin/time").is_file() else worker_command
+    # BSD time's -l flag is specific to macOS; GNU time on Linux rejects it.
+    timed_command = (
+        ["/usr/bin/time", "-l", *worker_command]
+        if platform.system() == "Darwin" and Path("/usr/bin/time").is_file()
+        else worker_command
+    )
     started_monotonic = time.monotonic()
     started_at_dt = datetime.now(UTC)
     started_at = started_at_dt.isoformat()
