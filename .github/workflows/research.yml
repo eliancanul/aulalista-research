@@ -1,0 +1,21 @@
+name: Research checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  reproducible:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pytest -q tests/test_shadow_import_benchmark.py tests/test_ux9_blocker5_gates.py
+      - run: python docs/research/bitacora-extraccion/graficas.py
+      - run: git diff --exit-code -- docs/research/bitacora-extraccion/figuras
